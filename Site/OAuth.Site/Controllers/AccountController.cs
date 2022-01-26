@@ -1,11 +1,25 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using OAuth.Domain.Extensions;
+using OAuth.Domain.Interfaces;
+using OAuth.Site.Models;
+using System.Threading.Tasks;
 
 namespace OAuth.Site.Controllers
 {
     public class AccountController : Controller
     {
+        private readonly IMinhaContaService _minhaContaService;
+        private readonly IHttpContextAccessor _httpContextAccessor;
+
+        public AccountController(IMinhaContaService minhaContaService, IHttpContextAccessor httpContextAccessor)
+        {
+            _minhaContaService = minhaContaService;
+            _httpContextAccessor = httpContextAccessor;
+        }
+
         [HttpGet]
         [Authorize]
         [Route("entrar")]
@@ -18,9 +32,17 @@ namespace OAuth.Site.Controllers
         }
 
         [Authorize, Route("minha-conta")]
-        public IActionResult MinhaConta()
+        public async Task<IActionResult> MinhaConta()
         {
-            return View();
+            var at = await _httpContextAccessor.HttpContext.GetTokenAsync("access_token");
+            var meusDados = await _minhaContaService.MeusDados(at);
+
+            return View(new MeusDadosModel
+            {
+                Codigo = meusDados.Codigo,
+                CPF = meusDados.CPF,
+                Nome = meusDados.Nome
+            });
         }
 
         [Route("sair")]

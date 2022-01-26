@@ -8,6 +8,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Logging;
 using Microsoft.IdentityModel.Tokens;
+using OAuth.Site.Configure;
 using System.Globalization;
 using System.IdentityModel.Tokens.Jwt;
 using System.Threading.Tasks;
@@ -47,6 +48,7 @@ namespace OAuth.Site
                     options.ResponseType = "code";
                     options.Scope.Add("openid");
                     options.Scope.Add("profile");
+                    options.Scope.Add("api_1");
                     options.GetClaimsFromUserInfoEndpoint = true;
                     options.SaveTokens = true;
                     options.Events.OnUserInformationReceived = context =>
@@ -68,6 +70,8 @@ namespace OAuth.Site
             {
                 options.LoginPath = new PathString("/conta/entrar");
             });
+
+            services.ConfigureSite();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

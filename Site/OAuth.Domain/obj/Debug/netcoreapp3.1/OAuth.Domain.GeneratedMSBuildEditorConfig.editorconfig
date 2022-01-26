@@ -1,3 +1,4 @@
 is_global = true
+build_property.RefitInternalNamespace = OAuth.Domain
 build_property.RootNamespace = OAuth.Domain
 build_property.ProjectDir = C:\_DiscoLocal\GIT\GitHub\OAuth\Site\OAuth.Domain\
