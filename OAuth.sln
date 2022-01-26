@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32106.194
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OAuth.SSO", "IdentityServer\OAuth.SSO.csproj", "{A7D55F69-7DA8-4971-8805-BFCAB2CD35E1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IdentityServer", "IdentityServer", "{183440F3-B83B-4A47-9091-974786026201}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Site", "Site", "{EDEA10A5-CF82-4221-ADAD-598EE1D72907}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OAuth.Site", "Site\OAuth.Site\OAuth.Site.csproj", "{0CFF6E08-BA3D-4A81-BF8A-2FCD7BE48E16}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OAuth.Domain", "Site\OAuth.Domain\OAuth.Domain.csproj", "{CEF9B501-0F5F-43E4-9A2F-09B19B600814}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A7D55F69-7DA8-4971-8805-BFCAB2CD35E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7D55F69-7DA8-4971-8805-BFCAB2CD35E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7D55F69-7DA8-4971-8805-BFCAB2CD35E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7D55F69-7DA8-4971-8805-BFCAB2CD35E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0CFF6E08-BA3D-4A81-BF8A-2FCD7BE48E16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CFF6E08-BA3D-4A81-BF8A-2FCD7BE48E16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CFF6E08-BA3D-4A81-BF8A-2FCD7BE48E16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CFF6E08-BA3D-4A81-BF8A-2FCD7BE48E16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CEF9B501-0F5F-43E4-9A2F-09B19B600814}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEF9B501-0F5F-43E4-9A2F-09B19B600814}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEF9B501-0F5F-43E4-9A2F-09B19B600814}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEF9B501-0F5F-43E4-9A2F-09B19B600814}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A7D55F69-7DA8-4971-8805-BFCAB2CD35E1} = {183440F3-B83B-4A47-9091-974786026201}
+		{0CFF6E08-BA3D-4A81-BF8A-2FCD7BE48E16} = {EDEA10A5-CF82-4221-ADAD-598EE1D72907}
+		{CEF9B501-0F5F-43E4-9A2F-09B19B600814} = {EDEA10A5-CF82-4221-ADAD-598EE1D72907}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {ED1146D9-7E99-4305-9CF1-FD8C4944144D}
+	EndGlobalSection
+EndGlobal

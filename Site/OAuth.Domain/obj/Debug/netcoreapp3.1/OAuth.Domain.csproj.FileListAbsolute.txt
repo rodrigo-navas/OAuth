@@ -1,0 +1,10 @@
+C:\_DiscoLocal\GIT\GitHub\OAuth\Site\OAuth.Domain\bin\Debug\netcoreapp3.1\OAuth.Domain.deps.json
+C:\_DiscoLocal\GIT\GitHub\OAuth\Site\OAuth.Domain\bin\Debug\netcoreapp3.1\OAuth.Domain.dll
+C:\_DiscoLocal\GIT\GitHub\OAuth\Site\OAuth.Domain\bin\Debug\netcoreapp3.1\OAuth.Domain.pdb
+C:\_DiscoLocal\GIT\GitHub\OAuth\Site\OAuth.Domain\obj\Debug\netcoreapp3.1\OAuth.Domain.csproj.AssemblyReference.cache
+C:\_DiscoLocal\GIT\GitHub\OAuth\Site\OAuth.Domain\obj\Debug\netcoreapp3.1\OAuth.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\_DiscoLocal\GIT\GitHub\OAuth\Site\OAuth.Domain\obj\Debug\netcoreapp3.1\OAuth.Domain.AssemblyInfoInputs.cache
+C:\_DiscoLocal\GIT\GitHub\OAuth\Site\OAuth.Domain\obj\Debug\netcoreapp3.1\OAuth.Domain.AssemblyInfo.cs
+C:\_DiscoLocal\GIT\GitHub\OAuth\Site\OAuth.Domain\obj\Debug\netcoreapp3.1\OAuth.Domain.csproj.CoreCompileInputs.cache
+C:\_DiscoLocal\GIT\GitHub\OAuth\Site\OAuth.Domain\obj\Debug\netcoreapp3.1\OAuth.Domain.dll
+C:\_DiscoLocal\GIT\GitHub\OAuth\Site\OAuth.Domain\obj\Debug\netcoreapp3.1\OAuth.Domain.pdb
