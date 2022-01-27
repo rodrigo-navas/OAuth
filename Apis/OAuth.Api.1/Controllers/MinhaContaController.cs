@@ -8,7 +8,7 @@ namespace OAuth.Api._1.Controllers
     [Route("minhaConta")]
     public class MinhaContaController : ControllerBase
     {
-        [Authorize]
+        [Authorize(Policy = "Proprietario")]
         [HttpGet("meusDados")]
         public IActionResult MeusDados()
         {
@@ -17,6 +17,16 @@ namespace OAuth.Api._1.Controllers
                 Codigo = 1,
                 Nome = "Rodrigo Navas",
                 CPF = "40721126820"
+            });
+        }
+
+        [Authorize]
+        [HttpGet("chamadaApiParceiro")]
+        public IActionResult ChamadaApiParceiro()
+        {
+            return Ok(new
+            {
+                descricao = "Ok, Acessou"
             });
         }
     }

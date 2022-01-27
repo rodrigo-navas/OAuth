@@ -22,18 +22,20 @@ namespace OAuth.Api._1
         {
             services.AddControllers();
 
+            // Aqui usando o JWT Token
             services.AddAuthentication(defaultScheme: "Bearer").AddJwtBearer(options =>
             {
                 options.Authority = "https://localhost:5001";
                 options.Audience = "api_1";
             });
 
+            // Aqui usando o References Token
             //services.AddAuthentication("Bearer")
             //   .AddOAuth2Introspection("Bearer",
             //       options =>
             //       {
             //           options.Authority = "https://localhost:5001";
-            //           options.ClientSecret = "b741982cf8f943aa87a38e3d2923de40";
+            //           options.ClientSecret = "335af9f38c484c2aad2aa8d64add12cc";
             //           options.ClientId = "api_1";
             //       });
 
@@ -62,14 +64,14 @@ namespace OAuth.Api._1
                 });
             });
 
-            //services.AddAuthorization(options =>
-            //{
-            //options.AddPolicy("Gerente", policy =>
-            //    policy.RequireClaim("Cargo", "Gerente"));
+            services.AddAuthorization(options =>
+            {
+                options.AddPolicy("Proprietario", policy =>
+                    policy.RequireClaim("cargo", "Proprietario"));
 
-            //options.AddPolicy("B2B", policy =>
-            //    policy.RequireAssertion(ctx => ctx.User.Identity.IsAuthenticated || ctx.User.HasClaim("parceiro", "frete")));
-            //});
+                //options.AddPolicy("B2B", policy =>
+                //    policy.RequireAssertion(ctx => ctx.User.Identity.IsAuthenticated || ctx.User.HasClaim("parceiro", "frete")));
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

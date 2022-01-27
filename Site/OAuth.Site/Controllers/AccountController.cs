@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using OAuth.Domain.Extensions;
 using OAuth.Domain.Interfaces;
 using OAuth.Site.Models;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace OAuth.Site.Controllers
@@ -34,6 +35,7 @@ namespace OAuth.Site.Controllers
         [Authorize, Route("minha-conta")]
         public async Task<IActionResult> MinhaConta()
         {
+            var cargoClaim = User.Claims.FirstOrDefault(f => f.Type.Equals("cargo"));
             var at = await _httpContextAccessor.HttpContext.GetTokenAsync("access_token");
             var meusDados = await _minhaContaService.MeusDados(at);
 

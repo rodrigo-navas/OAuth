@@ -53,7 +53,7 @@ namespace OAuth.Site
                     options.SaveTokens = true;
                     options.Events.OnUserInformationReceived = context =>
                     {
-                        options.ClaimActions.MapUniqueJsonKey("Cargo", "Cargo");
+                        options.ClaimActions.MapUniqueJsonKey("cargo", "cargo");
                         options.ClaimActions.MapUniqueJsonKey("picture", "picture");
                         return Task.CompletedTask;
                     };
